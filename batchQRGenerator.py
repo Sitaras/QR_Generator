@@ -18,7 +18,7 @@ if not os.path.exists(exportDirectory):
 for url in URLs:
     img = qrcode.make(url, image_factory = qrcode.image.svg.SvgImage)
 
-    filepath = exportDirectory + "/" + url.split("storeCode=",1)[1] + '.svg'
+    filePath = exportDirectory + "/" + url.split("storeCode=",1)[1] + '.svg'
 
-    with open(filepath, 'wb') as qr:
-        img.save(filepath)
+    with open(filePath, 'wb') as qr:
+        img.save(filePath)
